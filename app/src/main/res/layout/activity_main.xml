@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/counts1"
+        android:id="@+id/sMCounts"
         android:layout_width="170dp"
         android:layout_height="51dp"
         android:backgroundTint="@android:color/holo_green_dark"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.844" />
 
     <Button
-        android:id="@+id/counts2"
+        android:id="@+id/button2"
         android:layout_width="148dp"
         android:layout_height="47dp"
         android:backgroundTint="@android:color/holo_green_dark"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.445" />
 
     <Button
-        android:id="@+id/counts3"
+        android:id="@+id/button3"
         android:layout_width="148dp"
         android:layout_height="47dp"
         android:backgroundTint="@android:color/holo_green_dark"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.169" />
 
     <Button
-        android:id="@+id/counts"
+        android:id="@+id/button1"
         android:layout_width="148dp"
         android:layout_height="47dp"
         android:backgroundTint="@android:color/holo_green_dark"
@@ -89,6 +89,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.713" />
+
 
     <Toolbar
         android:id="@+id/toolbar"

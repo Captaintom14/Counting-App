@@ -10,8 +10,7 @@ public class sharedPreferenceHelper {
         sharedPreferences = context.getSharedPreferences("ProfilePreference", Context.MODE_PRIVATE );
     }
 
-    public void saveProfileName(String name)
-    {
+    public void saveProfileName(String name){
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("profileName",name );
         editor.commit();
