@@ -8,17 +8,101 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/counts1"
+        android:layout_width="170dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="@string/sMC"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844" />
+
+    <Button
+        android:id="@+id/counts2"
+        android:layout_width="148dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="@string/eB"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.445" />
+
+    <Button
+        android:id="@+id/counts3"
+        android:layout_width="148dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="@string/eC"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <Button
         android:id="@+id/SettingsButton"
         android:layout_width="133dp"
         android:layout_height="42dp"
         android:backgroundTint="@android:color/holo_green_dark"
-        android:text="Settings"
+        android:text="@string/settings"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintVertical_bias="0.169" />
+
+    <Button
+        android:id="@+id/counts"
+        android:layout_width="148dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="@string/eA"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334" />
+
+    <TextView
+        android:id="@+id/totalCount"
+        android:layout_width="167dp"
+        android:layout_height="33dp"
+        android:text="@string/tC"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.713" />
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="411dp"
+        android:layout_height="61dp"
+        android:background="#F66E6E"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:title="@string/title"
+        android:textStyle= "italic"
+        android:titleTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
