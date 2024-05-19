@@ -7,4 +7,12 @@
     <string name="tC">Total Count: </string>
     <string name="sMC">Show My Counts</string>
     <string name="title">Event Counter</string>
+    <string name="cName1">Counter Name 1</string>
+    <string name="cName2">Counter Name 2</string>
+    <string name="cName3">Counter Name 3</string>
+    <string name="ins">Please insert a name</string>
+    <string name="maxCount">Maximum Counts</string>
+    <string name="insC">Max count goes here</string>
+    <string name="save">Save</string>
+
 </resources>
