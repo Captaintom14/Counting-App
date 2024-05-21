@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 public class sharedPreferenceHelper {
     private SharedPreferences sharedPreferences;
-    public void SharedPreferenceHelper(Context context)
+    public sharedPreferenceHelper(Context context)
     {
         sharedPreferences = context.getSharedPreferences("ProfilePreference", Context.MODE_PRIVATE );
     }

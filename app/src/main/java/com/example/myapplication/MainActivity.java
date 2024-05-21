@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected Button showCounts;
 
     protected TextView textView;
-    protected sharedPreferenceHelper sPh = new sharedPreferenceHelper();
+    protected sharedPreferenceHelper sPH;
 
 
     @Override
@@ -35,31 +35,43 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sPH = new sharedPreferenceHelper(MainActivity.this);
+
         setupUI();
+        View.OnClickListener buttons = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToSettings();
+            }
+        };
+        settingsButton.setOnClickListener(buttons);
+    }
+
+    /*
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        String buttonName1;
+        String buttonName2;
+        String buttonName3;
 
 
-          }
-          private void setupUI() {
+
+    }
+*/
+
+
+    private void setupUI() {
               settingsButton = findViewById(R.id.SettingsButton);
               eventA = findViewById(R.id.button1);
               eventB = findViewById(R.id.button2);
               eventC = findViewById(R.id.button3);
               showCounts = findViewById(R.id.sMCounts);
               textView = findViewById(R.id.totalCount);
+    }
 
-
-              View.OnClickListener buttons = new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
-                      goToSettings();
-                  }
-              };
-              settingsButton.setOnClickListener(buttons);
-
-          }
-
-          private void goToSettings(){
-
+    private void goToSettings(){
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
 

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/settingsPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
@@ -22,31 +22,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editText3"
         android:layout_width="337dp"
         android:layout_height="42dp"
+        android:maxLength="20"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:ems="10"
         android:fontFamily="sans-serif-light"
+        android:hint="@string/ins"
         android:inputType="text"
-        android:text="@string/ins"
         android:textAlignment="viewStart"
+        android:textColorHighlight="@color/design_default_color_secondary"
+        android:textColorLink="@color/design_default_color_secondary_variant"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintVertical_bias="0.236" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="337dp"
         android:layout_height="42dp"
+        android:maxLength="20"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:ems="10"
         android:fontFamily="sans-serif-light"
+        android:hint="@string/ins"
         android:inputType="text"
-        android:text="@string/ins"
         android:textAlignment="viewStart"
+        android:textColorHighlight="@color/design_default_color_secondary"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,21 +63,39 @@
         app:layout_constraintVertical_bias="0.4" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText1"
         android:layout_width="337dp"
         android:layout_height="42dp"
+        android:maxLength="20"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:ems="10"
         android:fontFamily="sans-serif-light"
+        android:hint="@string/ins"
         android:inputType="text"
-        android:text="@string/ins"
         android:textAlignment="viewStart"
+        android:textColorHighlight="@color/design_default_color_secondary"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.56" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="171dp"
+        android:layout_height="31dp"
+        android:text="@string/maxCount"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.636" />
+
 
     <TextView
         android:id="@+id/counterName1"
@@ -114,27 +139,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.181" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="171dp"
-        android:layout_height="31dp"
-        android:text="@string/maxCount"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.636" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/countText"
         android:layout_width="337dp"
         android:layout_height="39dp"
         android:ems="10"
         android:fontFamily="sans-serif-light"
+        android:hint="@string/insC"
         android:inputType="number"
-        android:text="@string/insC"
+        android:textColorHighlight="@color/design_default_color_secondary"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -156,6 +170,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.83" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="314dp"
+        android:layout_height="44dp"
+        android:text="textview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.933" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

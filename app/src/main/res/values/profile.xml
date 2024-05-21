@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sharedPreferenceA"> profileA </string>
+    <string name="sharedPreferenceB"> profileB </string>
+    <string name="sharedPreferenceC"> profileC </string>
+</resources>
