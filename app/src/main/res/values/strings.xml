@@ -11,5 +11,6 @@
     <string name="maxCount">Maximum Counts</string>
     <string name="insC">Max count goes here</string>
     <string name="save">Save</string>
+    <string name="edit">Edit Settings</string>
 
 </resources>

@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
@@ -26,9 +27,14 @@ public class MainActivity extends AppCompatActivity {
     protected Button eventC;
     protected Button showCounts;
 
-    protected TextView textView;
+    protected TextView totalCount;
     protected sharedPreferenceHelper sPH;
+    Settings settings;
+    int countA;
+     int countB;
+     int countC;
 
+    int countDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sPH = new sharedPreferenceHelper(MainActivity.this);
-
         setupUI();
+        totalCount.setText("Total Count: " + String.valueOf(countDisplay));
         View.OnClickListener buttons = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,20 +53,27 @@ public class MainActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(buttons);
     }
 
-    /*
-    @Override
     protected void onStart() {
         super.onStart();
 
-        String buttonName1;
-        String buttonName2;
-        String buttonName3;
-
-
+        if (sPH.getProfileName1() == null && sPH.getProfileName2() == null && sPH.getProfileName3() == null){
+            goToSettings();
+        } else {
+            eventA.setText(sPH.getProfileName1());
+            eventB.setText(sPH.getProfileName2());
+            eventC.setText(sPH.getProfileName3());
+        }
 
     }
-*/
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        buttonIncrement();
+
+    }
 
     private void setupUI() {
               settingsButton = findViewById(R.id.SettingsButton);
@@ -68,13 +81,55 @@ public class MainActivity extends AppCompatActivity {
               eventB = findViewById(R.id.button2);
               eventC = findViewById(R.id.button3);
               showCounts = findViewById(R.id.sMCounts);
-              textView = findViewById(R.id.totalCount);
+              totalCount = findViewById(R.id.totalCount);
     }
+
+
+    private void buttonIncrement(){
+        eventA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countA++;
+                updateCounts();
+            }
+        });
+
+        eventB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countB++;
+                updateCounts();
+            }
+        });
+
+        eventC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countC++;
+                updateCounts();
+            }
+        });
+    }
+
+    private void updateCounts(){
+
+        countDisplay = countA + countB + countC;
+        totalCount.setText("Total Count: " + String.valueOf(countDisplay));
+
+        if (countDisplay == 10){
+            eventA.setEnabled(false);
+            eventB.setEnabled(false);
+            eventC.setEnabled(false);
+            Toast.makeText(this,"You have reached the maximum number of events", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
 
     private void goToSettings(){
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
-
     }
 }
 

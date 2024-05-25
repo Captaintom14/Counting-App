@@ -5,6 +5,14 @@ public class Settings {
     private String name1;
     private String name2;
     private String name3;
+    private  int totalCount;
+
+    public Settings() {
+        this.name1 = "";
+        this.name2 ="";
+        this.name3 = "";
+        this.totalCount = 0;
+    }
 
     public String getName1() {
         return name1;
@@ -30,4 +38,7 @@ public class Settings {
         this.name3 = name3;
     }
 
+    public int getTotalCount() {return totalCount;}
+
+    public void setTotalCount(int totalCount) {this.totalCount = totalCount;}
 }
