@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected TextView totalCount;
     protected sharedPreferenceHelper sPH;
-    Settings settings;
+
     int countA;
      int countB;
      int countC;
@@ -42,8 +42,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sPH = new sharedPreferenceHelper(MainActivity.this);
+
         setupUI();
+
+        //initialize the total count to 0
         totalCount.setText("Total Count: " + String.valueOf(countDisplay));
+
+
+        //If the user presses the "Settings" button, the user is directed to the Settings Page.
         View.OnClickListener buttons = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,8 +57,20 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         settingsButton.setOnClickListener(buttons);
+
+        //If the user presses the "Show my Counts" button, the use is directed to the Data Page.
+        View.OnClickListener data = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToData();
+            }
+
+    }; showCounts.setOnClickListener(data);
+
     }
 
+
+    //On the start of the Application, this method checks if all the three buttons have names set. If not, it directly goes to the Settings Page
     protected void onStart() {
         super.onStart();
 
@@ -67,14 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        buttonIncrement();
-
-    }
-
+    //This method is used to declare the UI and their identities
     private void setupUI() {
               settingsButton = findViewById(R.id.SettingsButton);
               eventA = findViewById(R.id.button1);
@@ -85,7 +96,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //This method allows to increment the count of each buttons.
     private void buttonIncrement(){
+
+        //Increments and updates the count of the upper button
         eventA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Increments and updates the count of the middle button
         eventB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Increments and updates the count of the lower button
         eventC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,12 +127,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    //This method allows to update the number of counts depending on the user input
     private void updateCounts(){
+
+        sPH.saveButtonOneCount(countA);
+        sPH.saveButtonTwoCount(countB);
+        sPH.saveButtonThreeCount(countC);
 
         countDisplay = countA + countB + countC;
         totalCount.setText("Total Count: " + String.valueOf(countDisplay));
 
-        if (countDisplay == 10){
+        //The three buttons are disabled after reaching to the maximum number of counts set by the user. A message is also shown.
+        if (countDisplay == sPH.getTotalCount()){
             eventA.setEnabled(false);
             eventB.setEnabled(false);
             eventC.setEnabled(false);
@@ -125,12 +148,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
+    //This method goes to the SettingsActivity Page
     private void goToSettings(){
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+
+    //This method goes to the DataActivity Page
+    private void goToData(){
+        Intent intent = new Intent(this, DataActivity.class);
+        startActivity(intent);
+    }
+
+
+
 }
 
 

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="settings">Settings</string>
+    <string name="data">Data Activity</string>
     <string name="tC">Total Count: </string>
     <string name="sMC">Show My Counts</string>
     <string name="title">Event Counter</string>
@@ -12,5 +13,6 @@
     <string name="insC">Max count goes here</string>
     <string name="save">Save</string>
     <string name="edit">Edit Settings</string>
+    <string name="dataToggle">Toggle Event Names</string>
 
 </resources>

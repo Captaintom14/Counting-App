@@ -3,6 +3,9 @@ package com.example.myapplication;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.util.Collections;
+import java.util.List;
+
 public class sharedPreferenceHelper {
     private SharedPreferences sharedPreferences;
     public sharedPreferenceHelper(Context context)
@@ -41,6 +44,38 @@ public class sharedPreferenceHelper {
     {
         return sharedPreferences.getString("profileName3", null);
     }
+
+
+    public void saveTotalCount(int count ){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("totalCount",count );
+        editor.commit();
+    }
+
+    public int getTotalCount(){ return sharedPreferences.getInt("totalCount",0);}
+
+
+    public void saveButtonOneCount(int count1){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("buttonOne",count1 );
+        editor.commit();
+    }
+    public int getButtonOneCount(){ return sharedPreferences.getInt("buttonOne",0);}
+
+    public void saveButtonTwoCount(int count2){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("buttonTwo",count2 );
+        editor.commit();
+    }
+    public int getButtonTwoCount(){ return sharedPreferences.getInt("buttonTwo",0);}
+
+    public void saveButtonThreeCount(int count3){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("buttonThree",count3 );
+        editor.commit();
+    }
+
+    public int getButtonThreeCount(){ return sharedPreferences.getInt("buttonThree",0);}
 
 }
 

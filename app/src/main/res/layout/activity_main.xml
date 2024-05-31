@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <Button
         android:id="@+id/button3"
@@ -45,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.546" />
 
     <Button
         android:id="@+id/SettingsButton"
@@ -74,6 +74,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.334" />
 
+
     <TextView
         android:id="@+id/totalCount"
         android:layout_width="167dp"
@@ -84,8 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
-
+        app:layout_constraintVertical_bias="0.687" />
 
     <Toolbar
         android:id="@+id/toolbar"

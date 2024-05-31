@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+
+//This class is used to store the data from the SettingActivity Page.
 public class Settings {
 
     private String name1;
@@ -7,6 +9,7 @@ public class Settings {
     private String name3;
     private  int totalCount;
 
+    //Allows to initiliaze the settings class.
     public Settings() {
         this.name1 = "";
         this.name2 ="";
@@ -14,6 +17,7 @@ public class Settings {
         this.totalCount = 0;
     }
 
+    // The following code is the get and set functionalities for the three names and the total count.
     public String getName1() {
         return name1;
     }
